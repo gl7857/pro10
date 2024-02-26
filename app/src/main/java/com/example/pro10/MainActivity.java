@@ -10,8 +10,6 @@ import android.widget.Switch;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-
-    int counter=0;
     Button btn1;
     ToggleButton tB;
     Switch switch1;
