@@ -26,28 +26,17 @@ public class MainActivity extends AppCompatActivity {
         btn1 = (Button) findViewById(R.id.btn1);
     }
     public void clicked(View view){
-        counter=counter+1;
-        switch (counter){
-            case 1:
-                switch1.setChecked(true);
-                tB.setChecked(false);
-                getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
-                break;
-            case 2:
-                switch1.setChecked(false);
-                tB.setChecked(true);
-                getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-                break;
-            case 3:
-                switch1.setChecked(true);
-                tB.setChecked(true);
-                getWindow().getDecorView().setBackgroundColor(Color.RED);
-                break;
-            case 4:
-                switch1.setChecked(false);
-                tB.setChecked(false);
-                getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-                break;
+        if (switch1.isChecked()==true && tB.isChecked()==false){
+            getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+        }
+        if (switch1.isChecked()==false && tB.isChecked()==true){
+            getWindow().getDecorView().setBackgroundColor(Color.GREEN);
+        }
+        if (switch1.isChecked()==true && tB.isChecked()==true) {
+            getWindow().getDecorView().setBackgroundColor(Color.RED);
+        }
+        if (switch1.isChecked()==false && tB.isChecked()==false){
+            getWindow().getDecorView().setBackgroundColor(Color.BLUE);
         }
 
     }
